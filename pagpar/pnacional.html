@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>P. Nacional</title>
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	<script src="../js/jquery.flexslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.flexslider').flexslider({
+                prevText: "",
+                nextText: "",
+                pauseOnAction: false,
+                slideshowSpeed: 3000,
+                touch: true
+            });
+        });
+    </script>
+</head>
+<body>
+	<h1 id="page-title">Parque Nacional</h1>
+	<div class="flexslider">
+		<ul class="slides">
+			<li>
+				<img src="../Assets/Parque nacional/1.jpg" alt="">
+			</li>
+			<li>
+				<img src="../Assets/Parque nacional/2.jpg" alt="">
+			</li>
+			<li>
+				<img src="../Assets/Parque nacional/3.jpg" alt="">
+            </li>
+		</ul>
+    </div>
+    <main class="contenido">
+            <h1>Información</h1>
+            <article>
+                <hr>
+                <p>Con una totalidad de 40 hectáreas, ubicado desde la Avenida Circunvalar 
+                    a la Carrera séptima entre calles 39 y 36 Sur, su fácil acceso hace que 
+                    el parque este a la mano de todos los usuarios de la comunidad circundante 
+                    de los barrios La Merced, Perseverancia, y El Paraíso, además se encuentra 
+                    rodeado por estudiantes provenientes de las universidades Javeriana y 
+                    Distrital Francisco José de Caldas.</p>
+            </article>
+    </main>
+</body>
+</html>

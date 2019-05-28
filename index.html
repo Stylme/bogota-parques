@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/rotating-slider.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Bogotá</title>
+</head>
+<body>
+    <header class="header content">
+        <div class="header-video">
+            <video src="Assets/bogota_cp.mp4" muted autoplay loop></video>
+        </div>
+        <div class="header-content">
+            <h1 class="h1">Bogotá al parque!</h1>
+            <div class="rotating-slider">
+                <ul class="slides">
+                  <li>
+                    <div class="inner">
+                        <h2><a href="pagpar/ptimiza.html" class="a">
+                          Parque Timiza
+                          </a>
+                        </h2>
+                      <p></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="inner">
+                      <h2><a href="pagpar/ptunal.html" class="a">
+                          Parque Tunal
+                      </a>
+                      </h2>
+                      <p></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="inner">
+                        <a href="pagpar/pnacional.html" class="a">
+                            Parque Nacional
+                        </a>     
+                    </div>
+                  </li>
+                  <li>
+                    <div class="inner">
+                        <a href="pagpar/psimon.html" class="a">
+                            Parque Simón Bolivar
+                        </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="inner">
+                        <a href="pagpar/pflorida.html" class="a">
+                            Parque la florida
+                        </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            
+        </div>
+    </header>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.rotating-slider.js"></script>
+    <script>
+        $(".rotating-slider").hide();
+        $(".h1").click(function(){
+            $(".rotating-slider").each(function() {
+                displaying = $(this).css("display");
+                if(displaying == "block") {
+                    $(this).fadeOut('slow',function() {
+                        $(this).css("display","none");
+                    });
+                } else {
+                    $(this).fadeIn('slow',function() {
+                        $(this).css("display","block");
+                    });
+                }
+            });
+        });
+        
+        $(function(){ 
+            $('.rotating-slider').rotatingSlider({
+                autoRotate:true,
+                autoRotateIntervale: 9000,
+                slideHeight : Math.min(360, window.innerWidth),
+                slideWidth : Math.min(480, window.innerWidth),
+            });
+        });
+        
+    </script>
+</body>
+</html>
